@@ -6,5 +6,19 @@ import { Component } from '@angular/core';
   styleUrls: [ './app.component.css' ]
 })
 export class AppComponent  {
-  name = 'Angular';
+  hierarchicalData = [{
+        name: 'Fruits',
+        isExpanded: true,
+        items: [
+            { name: 'Apples' },
+            { name: 'Oranges' }
+        ]
+    }, {
+        name: 'Vegetables',
+        isExpanded: true,
+        items: [
+            { name: 'Cucumbers' },
+            { name: 'Tomatoes' }
+        ]
+    }];
 }

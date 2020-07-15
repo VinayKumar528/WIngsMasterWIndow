@@ -1,26 +1,6 @@
-import { DxTreeViewModule } from "devextreme-angular";
-// ...
-export class AppComponent {
-    hierarchicalData = [{
-        name: 'Fruits',
-        isExpanded: true,
-        items: [
-            { name: 'Apples' },
-            { name: 'Oranges' }
-        ]
-    }, {
-        name: 'Vegetables',
-        isExpanded: true,
-        items: [
-            { name: 'Cucumbers' },
-            { name: 'Tomatoes' }
-        ]
-    }];
-}
-@NgModule({
-    imports: [
-        // ...
-        DxTreeViewModule
-    ],
-    // ...
-})
+<dx-tree-view
+    [dataSource]="hierarchicalData"
+    keyExpr="name"
+    displayExpr="name"
+    expandedExpr="isExpanded">
+</dx-tree-view>
