@@ -1,4 +1,26 @@
-<hello name="{{ name }}"></hello>
-<p>
-  Start editing to see some magic happen :)
-</p>
+import { DxTreeViewModule } from "devextreme-angular";
+// ...
+export class AppComponent {
+    hierarchicalData = [{
+        name: 'Fruits',
+        isExpanded: true,
+        items: [
+            { name: 'Apples' },
+            { name: 'Oranges' }
+        ]
+    }, {
+        name: 'Vegetables',
+        isExpanded: true,
+        items: [
+            { name: 'Cucumbers' },
+            { name: 'Tomatoes' }
+        ]
+    }];
+}
+@NgModule({
+    imports: [
+        // ...
+        DxTreeViewModule
+    ],
+    // ...
+})
